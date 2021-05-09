@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RPS</title>
+</head>
+<body>
+    <script>
+
+    const ai = ["rock", "paper", "scissors"];
+    const playerInput = ["rock", "paper", "scissors"];
+    const yesNo = confirm("Would you like to play a game of rock, paper, scissors?");   
+    let playerChoice;
+    
+   
+    if (yesNo === false) {
+        alert("Fine then, don't have fun.");
+        preventDefault();
+    } else if (yesNo === true) {
+        playerChoice = prompt("Great! Choose 'rock', 'paper', or 'scissors'.");
+    };
+    
+    // if (playerChoice !== "rock" || "paper" || "scissors") {
+    //     alert("Seriously? You have three options, it's that easy.")
+    // };
+
+    const aiRandom = ai[Math.floor(Math.random() * ai.length)];
+    const aiChoice = alert("Your opponent chose " + aiRandom + " .");
+    
+    const win = (playerChoice === playerInput[0] && aiRandom === playerInput[2]) || (playerChoice === playerInput[1] && aiRandom === playerInput[0]) || (playerChoice === playerInput[2] && aiRandom === playerInput[1]);
+    const lose = (playerChoice === playerInput[2] && aiRandom === playerInput[0]) || (playerChoice === playerInput[0] && aiRandom === playerInput[1]) || (playerChoice === playerInput[1] && aiRandom === playerInput[2]);
+    const tie = (playerChoice === playerInput[0] && aiRandom === playerInput[0]) || (playerChoice === playerInput[1] && aiRandom === playerInput[1]) || (playerChoice === playerInput[2] && aiRandom === playerInput[2]);
+    // const wrongInput = (playerChoice !== "rock" || "scissors" || "paper");
+
+    // tells the user who won based on the choices made
+    if (win) {
+        alert("You win!");
+    } else if (lose) {
+        alert("You lose!");
+    } else {
+        alert("It's a tie!");
+    };
+
+    const playAgain = confirm("Play again?");
+    
+    if (playAgain === true) {
+        location.reload();
+    } else if (playAgain === false) { 
+        alert("Okay, thanks for playing!");
+    };
+
+    
+    
+    
+    
+    /*const win = 
+    
+    if (playerInput === "rock" && aiRandom === "scissors") {
+        
+    } else if (playerInput === "scissors" && aiRandom === "paper") {
+        
+    } else if (playerInput === "paper" && aiRandom === "rock") {
+        
+    } else if (playerInput === "rock" && aiRandom === "paper") {
+        
+    } else if (playerInput === "scissors" && aiRandom === "rock") {
+        
+    } else if (playerInput === "paper" && aiRandom === "scissors") {
+        
+    }; */
+    
+    // if (playerInput !== "rock"|| playerInput !== "paper" || playerInput !== "scissors") {
+    //     alert(error);
+    // } else if (playerInput === "rock"|| playerInput === "paper" || playerInput === "scissors") {
+    //     console.log("nice");
+    // };
+    
+    
+    
+    // ================== *** ================== //
+    /*
+    
+    basic function to work towards:
+    
+    > several variables, including win and lose conditions
+    > prompt; user inputs a value from array (r, p, or s)
+    > store user input in variable
+    > this triggers ai picking a random value from array
+    > store ai choice in a variable
+    > once these are both done, there's a comparion between the two variables
+    > comparison determines the winner based on preset win and lose conditions
+    > states what the ai chose
+    > states who won
+    > possible to state ai choice and who won in one alert
+    
+    */
+    // ================== *** ================== //
+
+
+    /* if (lose === true) {
+        alert("the computer chose " + aiRandom);
+        alert("you lose");
+    } else if (win === lose) {
+        alert("the computer chose " + aiRandom);
+        alert("it's a draw.")
+    } else (win === true); {
+        alert("the computer chose " + aiRandom);
+        alert("you win");
+    };
+    */
+
+
+
+/* let user = ["r", "p", "s"];
+    let com = ["r", "p", "s"];
+    let lose = (user === "s" && com === "p") || (user === "r" && com === "p") || (user === "p" && com === "s");
+    let win = (user === "r" && com === "s") || (user === "p" && com === "r") || (user === "s" && com === "p");
+
+    prompt("choose r, p, or s");
+    if (lose === true); {
+        alert("you lose");
+    }
+    */
+    </script>
+</body>
+</html>
